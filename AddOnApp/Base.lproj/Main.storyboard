@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6198" systemVersion="14A297b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6198"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -641,16 +642,16 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider=""/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller - Window-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="A Licensed Product" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -667,10 +668,44 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView alphaValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="vhF-vV-a9p">
+                                <rect key="frame" x="139" y="30" width="202" height="211"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="ItsPhilCo_V1_addon" id="T5u-54-gxk"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Uyr-We-NJD">
+                                <rect key="frame" x="126" y="144" width="229" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="iN7-EI-bSd"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="If you can see this, you are licensed." id="Boc-pS-KCO">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aUJ-fQ-ela">
+                                <rect key="frame" x="126" y="206" width="228" height="23"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="It's PhilCo" id="mVp-kE-wHc">
+                                    <font key="font" size="19" name=".HelveticaNeueDeskInterface-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Uyr-We-NJD" firstAttribute="top" secondItem="aUJ-fQ-ela" secondAttribute="bottom" constant="45" id="9VT-3k-WH8"/>
+                            <constraint firstItem="Uyr-We-NJD" firstAttribute="leading" secondItem="aUJ-fQ-ela" secondAttribute="leading" id="Bj7-Sn-Q6a"/>
+                            <constraint firstItem="aUJ-fQ-ela" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="41" id="MfR-dm-Wvs"/>
+                            <constraint firstItem="vhF-vV-a9p" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="NeB-pL-m00"/>
+                            <constraint firstItem="aUJ-fQ-ela" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="pbN-eA-jmS"/>
+                            <constraint firstItem="Uyr-We-NJD" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="tHm-aD-vFL"/>
+                            <constraint firstItem="vhF-vV-a9p" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="z1D-QW-x6h"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -678,4 +713,7 @@
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ItsPhilCo_V1_addon" width="202" height="211"/>
+    </resources>
 </document>
